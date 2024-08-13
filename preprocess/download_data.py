@@ -61,7 +61,7 @@ def flac2wav(base_dir):
 def update_tsv(split, base_dir):
     file_path = os.path.join(base_dir, f"{split}.tsv")
     df = pd.read_csv(file_path, sep="\t", header=None, names=["path", "text"])
-    df["path"] = os.path.join("wav",df["path"].str.replace(".flac", ".wav"))
+    df["path"] = "wav" + os.sep + df["path"].str.replace(".flac", ".wav")
     df.to_csv(file_path, sep="\t", header=False, index=False)
 
 def main(split, base_dir, no_download, no_conversion):
