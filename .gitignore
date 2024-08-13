@@ -186,4 +186,5 @@ cython_debug/
 #.idea/
 **/.tmp
 test.*
+datasets/*
 !fam/quantiser/audio/speaker_encoder/ckpt/ckpt.pt
